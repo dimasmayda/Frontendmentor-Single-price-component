@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+body {
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.container {
+      display: grid;
+      max-width: 1440px;
+      width: 40%;
+      box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+      border-radius: 10px;
+      grid-template-areas: "join join" "subscription why-us";
+      grid-template-columns: 50% 50%;
+
+}
+
+#join { 
+    grid-area: join;
+    background-color: white;
+    padding: 30px;
+    text-align: left;
+    border-radius: 10px 10px 0px 0px;
+    line-height: 30px;
+
+
+}
+
+h2 {
+    color:hsl(179, 62%, 43%);
+    margin-bottom: 20px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#join h3 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+#join p {
+    color:
+    hsl(218, 22%, 67%);
+    margin-left: 10px;    
+    font-size: 16px;
+}
+
+#subscription {
+    grid-area: subscription;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0px 0px 0px 10px;
+    padding: 30px;
+    color: white;
+    text-align: left;
+}
+
+#subscription h3 {
+    font-size: 20px;
+    margin-bottom: 13px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+#subscription p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.month {
+    color: hsl(204, 43%, 93%, 0.5);
+}
+
+#subscription button {
+    width: 80%;
+    padding: 13px;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;    
+    font-weight: 400;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+#subscription button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  #subscription button:focus {
+    outline: none;
+  }
+
+#why-us {
+    grid-area: why-us;
+    background-color: hsla(179, 62%, 43%, 0.8);
+    border-radius: 0px 0px 10px 0px;
+    padding: 30px;
+}
+
+#why-us h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 13px;
+    margin-top: 10px;
+    font-weight: 700;
+
+}
+
+#why-us p {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.attribution {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px; 
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 800px) {
+    .container {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    body {
+      height: unset;
+      padding: 50px;
+    }
+    .container {
+      grid-template-areas: "join join" "subscription subscription" "why-us why-us";
+    }
+    #join {
+      border-radius: 10px 10px 0px 0px;
+    }
+    #subscription {
+      border-radius: 0px;
+    }
+    #why-us {
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
